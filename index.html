@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Database Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 4rem;
+    }
+    .container {
+      max-width: 900px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Library System</a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Library Database Management</h2>
+
+    <!-- Book Search Form -->
+    <form id="searchForm" class="mb-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for a book by title or author..." />
+        <button class="btn btn-primary" type="submit">Search</button>
+      </div>
+    </form>
+
+    <!-- Add Book Form -->
+    <div class="card mb-4">
+      <div class="card-header">Add New Book</div>
+      <div class="card-body">
+        <form id="addBookForm">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" required />
+          </div>
+          <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" required />
+          </div>
+          <div class="mb-3">
+            <label for="isbn" class="form-label">ISBN</label>
+            <input type="text" class="form-control" id="isbn" required />
+          </div>
+          <button type="submit" class="btn btn-success">Add Book</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Books Table -->
+    <h4>Books in Library</h4>
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN</th>
+        </tr>
+      </thead>
+      <tbody id="booksTableBody">
+        <!-- Sample row -->
+        <tr>
+          <td>Sample Book</td>
+          <td>Author Name</td>
+          <td>1234567890</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
